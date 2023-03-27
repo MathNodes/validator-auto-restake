@@ -1,0 +1,8 @@
+#!/usr/bin/expect
+set AMOUNT [lindex $argv 0]
+set timeout 1
+spawn ~/go/bin/bitsongd tx staking delegate bitsongvaloper... $AMOUNT --from bitsong1... --chain-id bitsong-2b --gas 300000 --gas-prices 0.3ubtsg --gas-adjustment 1.5 --yes --keyring-backend file --keyring-dir /home/bitsong/Validator --node https://rpc.bitsong.quokkastake.io:443
+expect "Enter*"
+send "password\r"
+expect eof
+

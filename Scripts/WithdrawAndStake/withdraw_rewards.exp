@@ -1,0 +1,7 @@
+#!/usr/bin/expect
+set timeout 2
+spawn /home/bitsong/go/bin/bitsongd tx distribution withdraw-rewards bitsongvaloper... --from bitsong1... --commission --chain-id bitsong-2b --gas 300000 --gas-prices 0.3ubtsg --gas-adjustment 1.25 --yes --keyring-backend file --keyring-dir /home/bitsong/Validator --node https://rpc.bitsong.quokkastake.io:443
+expect "Enter*"
+send "password\r"
+expect eof
+
